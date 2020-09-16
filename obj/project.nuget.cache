@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "75CQ3W3NRK9HN9f3gunyT288ZS1C3jfuWSntH/60euC2zPcgkEvZDuqYCMdXpKUXYbdAJcKUba3PAKSMxYIsQA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Ville\\Documents\\GameWebApi\\GameWebApi.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Ville\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

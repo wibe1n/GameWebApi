@@ -15,8 +15,8 @@ namespace GameWebApi.Controllers {
         }
 
         [HttpGet("{id:Guid}")]
-        public Task<Player> Get(Guid id){
-            return repository.Get(id);
+        public async Task<Player> Get(Guid id){
+            return await repository.Get(id);
         }
 
         /*[HttpGet]
@@ -25,13 +25,13 @@ namespace GameWebApi.Controllers {
         }*/
 
         [HttpGet]
-        public Task<Player[]> GetAll(){
-            return repository.GetAll();
+        public async Task<Player[]> GetAll(){
+            return await repository.GetAll();
 
         }
 
         [HttpPost]
-        public Task<Player> Create(NewPlayer player){
+        public async Task<Player> Create(NewPlayer player){
             Player createdPlayer = new Player();
             createdPlayer.Name = player.Name;
             createdPlayer.Id = Guid.NewGuid();
@@ -39,15 +39,15 @@ namespace GameWebApi.Controllers {
             createdPlayer.Level = 1;
             createdPlayer.Score = 0;
             createdPlayer.CreationTime = DateTime.UtcNow;
-            return repository.Create(createdPlayer);
+            return await repository.Create(createdPlayer);
         }
         [HttpPut("{id}")]
-        public Task<Player> Modify(Guid id, ModifiedPlayer player){
-                return repository.Modify(id, player);
+        public async Task<Player> Modify(Guid id, ModifiedPlayer player){
+                return await repository.Modify(id, player);
         }
         [HttpDelete("{id:guid}")]
-        public Task<Player> Delete(Guid id){
-            return repository.Delete(id);
+        public async Task<Player> Delete(Guid id){
+            return await repository.Delete(id);
         }
 
     }

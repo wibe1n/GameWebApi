@@ -37,7 +37,7 @@ namespace GameWebApi
             {
                 app.UseDeveloperExceptionPage();
             }
-
+            app.UseMyMiddleware();
 
             app.UseRouting();
 

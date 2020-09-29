@@ -23,8 +23,13 @@ namespace GameWebApi
                     webBuilder.UseStartup<Startup>();
                 });
     }
-        class NotFoundException : Exception {
+    class NotFoundException : Exception {
         public NotFoundException(string str) : base(str){
+            
+        }    
+    }
+    class InvalidItemException : Exception {
+        public InvalidItemException(string str) : base(str){
             
         }
     }
